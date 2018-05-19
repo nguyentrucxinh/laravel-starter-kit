@@ -85,14 +85,19 @@
 - [ ] Get property from `env`
 - [ ] HATEOAS
 - [ ] OAuth2
-- [ ] JWT
+- [ ] JWT (tymon/jwt-auth)
 - [ ] Swagger
 - [ ] Cookie
 - [ ] Multi languages
 - [ ] Multi databases
-- [ ] PHP Formatter for VSCode
+- [x] PHP Formatter for VSCode (php cs fixer)
+- [x] PHP Debug
+- [x] PHP IntelliSense (PHP Intelephense)
 - [x] Alias class
 - [x] Model guarded
+- [ ] Import/Export Excel/CSV (maatwebsite/excel)
+- [ ] Package (barryvdh/laravel-ide-helper, doctrine/dbal)
+- [ ] CORS (barryvdh/laravel-cors)
 
 # RUN LOCALLY
 
