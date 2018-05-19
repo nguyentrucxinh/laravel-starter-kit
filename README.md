@@ -6,7 +6,7 @@
 
 ## The Basics
 
-- [ ] Routing & Middleware group
+- [x] Routing & Middleware group
   + https://laravel.com/docs/5.6/routing
   + https://laravel.com/docs/5.6/middleware
 - [ ] URL Generation
@@ -56,7 +56,7 @@
   + https://laravel.com/docs/5.6/pagination
 - [ ] Migration
   + https://laravel.com/docs/5.6/migrations
-- [ ] Seeding
+- [x] Seeding (Model Factory with Faker)
   + https://laravel.com/docs/5.6/seeding
 
 ## Eloquent ORM

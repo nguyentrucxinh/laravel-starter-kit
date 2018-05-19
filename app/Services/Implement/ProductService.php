@@ -33,7 +33,7 @@ class ProductService implements ProductServiceInterface
     function createOne($data) {
         // TODO: Validation
 
-        DB::transaction(function () {
+        DB::transaction(function () use ($data) {
             $this->productRepo->createOne($data);
         });
         return null;

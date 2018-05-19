@@ -21,7 +21,7 @@ class ProductValidation implements ProductValidationInterface
         ]);
 
         if ($validator->fails()) {
-            throw new Exception('');
+            throw new \App\Exceptions\ApiException('Something Went Wrong.');
         }
     }
 
