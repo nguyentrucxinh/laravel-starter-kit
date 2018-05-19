@@ -17,7 +17,7 @@
   + https://laravel.com/docs/5.6/validation
 - [x] Error Handling (Global Exception)
   + https://laravel.com/docs/5.6/errors
-- [ ] Logging
+- [x] Logging
   + https://laravel.com/docs/5.6/logging
 
 ## Security

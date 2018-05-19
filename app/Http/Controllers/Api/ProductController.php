@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 
 use App\Services\ProductServiceInterface;
 use App\Validation\ProductValidationInterface;
+use Log;
 
 class ProductController extends Controller
 {
@@ -38,6 +39,18 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $message = 'test logging';
+        Log::emergency($message);
+        Log::alert($message);
+        Log::critical($message);
+        Log::error($message);
+        Log::warning($message);
+        Log::notice($message);
+        Log::info($message);
+        Log::debug($message);
+
+        Log::info('User failed to login.', ['id' => 1]);
+
         $this->productValid->createOne($request->all());
         return $this->productService->createOne($request->all());
     }
