@@ -18,8 +18,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 // Route groups
-Route::group(['prefix' => 'products', 'namespace' => 'Api'], function () {
+Route::group(['prefix' => 'products', 'middleware' => [], 'namespace' => 'Api'], function () {
     Route::get('/', 'ProductController@index');
+    Route::post('/', 'ProductController@store');
 });
 
 // Route middleware
