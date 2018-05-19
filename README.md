@@ -63,7 +63,7 @@
 
 - [ ] Relationships
   + https://laravel.com/docs/5.6/eloquent-relationships
-- [ ] Mutators
+- [x] Mutators
   + https://laravel.com/docs/5.6/eloquent-mutators
 - [x] API Resources (Transformation layer, Model -> JSON)
   + https://laravel.com/docs/5.6/eloquent-resources
