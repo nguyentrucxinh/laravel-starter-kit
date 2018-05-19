@@ -13,9 +13,9 @@
   + https://laravel.com/docs/5.6/urls
 - [ ] Session
   + https://laravel.com/docs/5.6/session
-- [ ] Validation Layer
+- [x] Validation Layer
   + https://laravel.com/docs/5.6/validation
-- [ ] Error Handling (Global Exception)
+- [x] Error Handling (Global Exception)
   + https://laravel.com/docs/5.6/errors
 - [ ] Logging
   + https://laravel.com/docs/5.6/logging
@@ -54,7 +54,7 @@
 
 - [ ] Pagination
   + https://laravel.com/docs/5.6/pagination
-- [ ] Migration
+- [x] Migration
   + https://laravel.com/docs/5.6/migrations
 - [x] Seeding (Model Factory with Faker)
   + https://laravel.com/docs/5.6/seeding
@@ -71,15 +71,15 @@
 ## Others
 
 - [ ] REST
-- [ ] Service Layer (BaseService)
-- [ ] Repository Layer
+- [x] Service Layer (BaseService)
+- [x] Repository Layer
 - [ ] Helper Layer (Utils)
 - [x] SQLite
 - [ ] Enviroment: dev, prod
-- [ ] Transaction
+- [x] Transaction
 - [ ] Create Base
-  + [ ] BaseRepository
-  + [ ] BaseService
+  + [x] BaseRepository
+  + [x] BaseService
   + [ ] BaseController
 - [ ] Custom response data {status_code, message, data, ...}
 - [ ] Get property from `env`
@@ -91,6 +91,8 @@
 - [ ] Multi languages
 - [ ] Multi databases
 - [ ] PHP Formatter for VSCode
+- [x] Alias class
+- [x] Model guarded
 
 # RUN LOCALLY
 
