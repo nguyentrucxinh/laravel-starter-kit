@@ -145,6 +145,7 @@ phpinfo();
   + `make:policy`
   + `make:provider`
 - Artisan console help: `php artisan help`
+- JWT issues: https://appdividend.com/2018/02/24/laravel-jwt-authentication-tutorial/
 
 # ACCESS LINK
 
