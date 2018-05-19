@@ -95,9 +95,9 @@
 - [x] PHP IntelliSense (PHP Intelephense)
 - [x] Alias class
 - [x] Model guarded
-- [ ] Import/Export Excel/CSV (maatwebsite/excel)
-- [ ] Package (barryvdh/laravel-ide-helper, doctrine/dbal)
+- [x] Package (barryvdh/laravel-ide-helper, doctrine/dbal)
 - [ ] CORS (barryvdh/laravel-cors)
+- [ ] Import/Export Excel/CSV (maatwebsite/excel)
 
 # RUN LOCALLY
 
