@@ -4,6 +4,7 @@ namespace App\Validation\Implement;
 
 use App\Validation\ProductValidationInterface;
 use Validator;
+use ApiException;
 
 class ProductValidation implements ProductValidationInterface
 {
@@ -21,7 +22,7 @@ class ProductValidation implements ProductValidationInterface
         ]);
 
         if ($validator->fails()) {
-            throw new \App\Exceptions\ApiException('Something Went Wrong.');
+            throw new ApiException('Something Went Wrong.');
         }
     }
 
