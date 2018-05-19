@@ -27,6 +27,12 @@ class AppServiceProvider extends ServiceProvider
          * =============== REPOSITORY ===============
          * */
 
+        // User
+        $this->app->bind(
+            'App\Repositories\UserRepositoryInterface',
+            'App\Repositories\Eloquent\UserEloquentRepository'
+        );
+
         // Product
         $this->app->bind(
             'App\Repositories\ProductRepositoryInterface',
@@ -36,6 +42,12 @@ class AppServiceProvider extends ServiceProvider
         /*
          * =============== VALIDATION ===============
          * */
+
+        // UserValidation
+        $this->app->bind(
+            'App\Validation\UserValidationInterface',
+            'App\Validation\Implement\UserValidation'
+        );
 
         // ProductValidation
         $this->app->bind(

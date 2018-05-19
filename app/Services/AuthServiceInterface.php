@@ -19,10 +19,4 @@ interface AuthServiceInterface
      * @return array
      */
     public function getCurrentUser();
-
-    /**
-     * @param $user \App\User
-     * @return array
-     */
-    public function getInfoCurrentUser($user);
 }

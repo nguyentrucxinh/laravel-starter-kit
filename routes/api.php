@@ -19,11 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // Route groups
 Route::group(['prefix' => 'products', 'middleware' => [], 'namespace' => 'Api'], function () {
-    Route::get('/', 'ProductController@index');
-    Route::post('/', 'ProductController@store');
-    Route::get('/{id}', 'ProductController@show');
-    Route::put('/{id}', 'ProductController@update');
-    Route::delete('/{id}', 'ProductController@destroy');
 });
 
 // Route middleware
@@ -61,5 +56,23 @@ Route::middleware('auth:api', 'throttle:60,1')->group(function () {
     // an authenticated user may access the following group of routes 60 times per minute
     Route::get('/user', function () {
         //
+    });
+});
+
+// Using
+Route::group(['prefix' => '', 'namespace' => 'Api'], function () {
+    Route::post('/authentication', 'AuthController@authentication');
+
+    Route::group(['middleware' => 'jwt.auth'], function () {
+        Route::get('/authorization', 'AuthController@authorization');
+
+        // Product
+        Route::group(['middleware' => [], 'prefix' => 'products'], function () {
+            Route::get('/', 'ProductController@index');
+            Route::post('/', 'ProductController@store');
+            Route::get('/{id}', 'ProductController@show');
+            Route::put('/{id}', 'ProductController@update');
+            Route::delete('/{id}', 'ProductController@destroy');
+        });
     });
 });
