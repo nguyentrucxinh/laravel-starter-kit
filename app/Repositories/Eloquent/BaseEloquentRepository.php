@@ -32,6 +32,11 @@ abstract class BaseEloquentRepository implements BaseRepositoryInterface
         return $this->getModel()->all();
     }
 
+    public function findAllWithPagination()
+    {
+        return $this->getModel()->paginate(2);
+    }
+
     public function findAllByIds($ids)
     {
         return $this->getModel()->whereIn('id', $ids)
@@ -60,8 +65,9 @@ abstract class BaseEloquentRepository implements BaseRepositoryInterface
     public function updateOne($id, $data)
     {
         $isSuccess = $this->getModel()->where('id', $id)->update($data); // number
-        if (!$isSuccess)
+        if (!$isSuccess) {
             return null;
+        }
         return $this->getModel()->find($id); // object
     }
 
@@ -93,8 +99,8 @@ abstract class BaseEloquentRepository implements BaseRepositoryInterface
     public function generateCode($prefix)
     {
         $code = $prefix . date('ymd');
-        $stt  = $this->getModel()->where('code', 'like', $code . '%')->get()->count() + 1;
-        return $code . substr("00" . $stt, -3);
+        $stt = $this->getModel()->where('code', 'like', $code . '%')->get()->count() + 1;
+        return $code . substr('00' . $stt, -3);
     }
 
     public function existsValue($field_name, $value, $skip_id = [])
@@ -113,5 +119,4 @@ abstract class BaseEloquentRepository implements BaseRepositoryInterface
     {
         return $this->findAllSkeleton()->where('id', $id)->first();
     }
-
 }

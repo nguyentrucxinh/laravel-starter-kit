@@ -17,7 +17,7 @@ class ProductService implements ProductServiceInterface
 
     public function readAll()
     {
-        return $this->productRepo->findAll();
+        return $this->productRepo->findAllWithPagination();
     }
 
     public function readOne($id)

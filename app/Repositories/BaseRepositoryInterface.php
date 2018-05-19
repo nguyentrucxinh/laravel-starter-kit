@@ -16,6 +16,11 @@ interface BaseRepositoryInterface
     public function findAll();
 
     /**
+     * @return \Illuminate\Support\Collection
+     */
+    public function findAllWithPagination();
+
+    /**
      * @param $ids array
      * @return \Illuminate\Support\Collection
      */

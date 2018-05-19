@@ -52,7 +52,7 @@
 
 ## Database
 
-- [ ] Pagination
+- [x] Pagination
   + https://laravel.com/docs/5.6/pagination
 - [x] Migration
   + https://laravel.com/docs/5.6/migrations
