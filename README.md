@@ -65,7 +65,7 @@
   + https://laravel.com/docs/5.6/eloquent-relationships
 - [ ] Mutators
   + https://laravel.com/docs/5.6/eloquent-mutators
-- [ ] API Resources (Transformation layer, Model -> JSON)
+- [x] API Resources (Transformation layer, Model -> JSON)
   + https://laravel.com/docs/5.6/eloquent-resources
 
 ## Others
@@ -104,9 +104,9 @@
 
 # TIPS & TRICKS
 
-- `php -S localhost:8080 -t public/`
-- `php --ini`
-- `php -m` or `php -m | grep -i mongo`
+- Local serve: `php -S localhost:8080 -t public/`
+- Reload modules: `php --ini`
+- View modules: `php -m` or `php -m | grep -i mongo`
 ```php
 <?php
 
@@ -116,7 +116,7 @@ phpinfo();
 ?>
 ```
 - `composer dump-autoload`
-- `php artisan route:list`
+- List route: `php artisan route:list`
 - Create model & migration: `php artisan make:model Product -m`
 - Create seeder: `php artisan make:seeder UsersTableSeeder`
 - Create API controller: `php artisan make:controller Api/AdminController --api`

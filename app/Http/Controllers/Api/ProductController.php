@@ -4,17 +4,17 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
 use App\Services\ProductServiceInterface;
 use App\Validation\ProductValidationInterface;
 use Log;
+use App\Http\Resources\ProductResource;
 
 class ProductController extends Controller
 {
-    protected $productService, $productValid;
+    protected $productService;
+    protected $productValid;
 
-    public function __construct(ProductServiceInterface $productService
-        , ProductValidationInterface $productValid)
+    public function __construct(ProductServiceInterface $productService, ProductValidationInterface $productValid)
     {
         $this->productService = $productService;
         $this->productValid = $productValid;
@@ -28,7 +28,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = $this->productService->readAll();
-        return response()->json($products);
+        return ProductResource::collection($products);
     }
 
     /**
@@ -63,7 +63,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        return new ProductResource($this->productService->readOne($id));
     }
 
     /**

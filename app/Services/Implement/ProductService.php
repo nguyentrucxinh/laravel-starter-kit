@@ -5,32 +5,30 @@ namespace App\Services\Implement;
 use App\Services\ProductServiceInterface;
 use App\Repositories\ProductRepositoryInterface;
 use DB;
-use League\Flysystem\Exception;
 
 class ProductService implements ProductServiceInterface
 {
-    protected $productRepo, $modelName = 'product';
+    protected $productRepo;
 
     public function __construct(ProductRepositoryInterface $productRepo)
     {
         $this->productRepo = $productRepo;
     }
 
-    function readAll() {
-        return [
-            $this->modelName . 's' => $this->productRepo->findAll()
-        ];
+    public function readAll()
+    {
+        return $this->productRepo->findAll();
     }
 
-    function readOne($id) {
+    public function readOne($id)
+    {
         // TODO: Validation
 
-        return [
-            $this->modelName => $this->productRepo->findOne()
-        ];
+        return $this->productRepo->findOne($id);
     }
 
-    function createOne($data) {
+    public function createOne($data)
+    {
         // TODO: Validation
 
         DB::transaction(function () use ($data) {
@@ -39,7 +37,8 @@ class ProductService implements ProductServiceInterface
         return null;
     }
 
-    function updateOne($data) {
+    public function updateOne($data)
+    {
         // TODO: Validation
 
         DB::transaction(function () {
@@ -48,7 +47,8 @@ class ProductService implements ProductServiceInterface
         return null;
     }
 
-    function deleteOne($id) {
+    public function deleteOne($id)
+    {
         // TODO: Validation
 
         DB::transaction(function () {
@@ -56,5 +56,4 @@ class ProductService implements ProductServiceInterface
         });
         return null;
     }
-
 }
