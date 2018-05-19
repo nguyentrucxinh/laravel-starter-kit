@@ -74,7 +74,7 @@
 - [ ] Service Layer (BaseService)
 - [ ] Repository Layer
 - [ ] Helper Layer (Utils)
-- [ ] SQLite
+- [x] SQLite
 - [ ] Enviroment: dev, prod
 - [ ] Transaction
 - [ ] Create Base
@@ -90,11 +90,42 @@
 - [ ] Cookie
 - [ ] Multi languages
 - [ ] Multi databases
+- [ ] PHP Formatter for VSCode
 
 # RUN LOCALLY
 
-- Dev: `php artisan serve`
-- Prod: ``
+- Install package: `composer install`
+- Create env: `php -r "file_exists('.env') || copy('.env.example', '.env');"`
+- Generate key: `php artisan key:generate`
+- Run Dev: `php artisan serve`
+- Run Prod: ``
+
+# TIPS & TRICKS
+
+- `composer dump-autoload`
+- Create model & migration: `php artisan make:model Product -m`
+- Create seeder: `php artisan make:seeder UsersTableSeeder`
+- Create API controller: `php artisan make:controller Api/AdminController --api`
+- Drop all table & migration & seeding: `php artisan migrate:refresh --seed`
+- Seed 1 class: `php artisan db:seed --class=UsersTableSeeder`
+- Create API resource: `php artisan make:resource Users --collection` or `php artisan make:resource UserCollection`
+- Create form request: `php artisan make:request StoreBlogPost`
+- Create rule: `php artisan make:rule Uppercase`
+- PHP Shell: `php artisan tinker`
+- Artisan console list: `php artisan list`
+  + `make:channel`
+  + `make:command`
+  + `make:event`
+  + `make:exception`
+  + `make:factory`
+  + `make:job`
+  + `make:listener`
+  + `make:mail`
+  + `make:middleware`
+  + `make:notification`
+  + `make:policy`
+  + `make:provider`
+- Artisan console help: `php artisan help`
 
 # ACCESS LINK
 
