@@ -37,11 +37,10 @@
   + https://laravel.com/docs/5.6/broadcasting
 - [ ] Cache
   + https://laravel.com/docs/5.6/cache
-  + https://laravel.com/docs/5.6/events
 - [ ] Events
   + https://laravel.com/docs/5.6/events
 - [ ] File Storage (Upload file, Get file, Delete file, Overwrite file, ...)
-  + https://laravel.com/docs/5.6/events
+  + https://laravel.com/docs/5.6/filesystem
 - [ ] Mail (mailtrap.io)
   + https://laravel.com/docs/5.6/mail
 - [ ] Notifications
