@@ -50,6 +50,7 @@ class AuthService implements AuthServiceInterface
 
     public function authorization()
     {
+        return self::getCurrentUser();
     }
 
     public function getCurrentUser()
