@@ -105,7 +105,19 @@
 
 # TIPS & TRICKS
 
+- `php -S localhost:8080 -t public/`
+- `php --ini`
+- `php -m` or `php -m | grep -i mongo`
+```php
+<?php
+
+// Show all information, defaults to INFO_ALL
+phpinfo();
+
+?>
+```
 - `composer dump-autoload`
+- `php artisan route:list`
 - Create model & migration: `php artisan make:model Product -m`
 - Create seeder: `php artisan make:seeder UsersTableSeeder`
 - Create API controller: `php artisan make:controller Api/AdminController --api`
