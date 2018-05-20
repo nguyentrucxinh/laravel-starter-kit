@@ -8,6 +8,7 @@ use App\Services\ProductServiceInterface;
 use App\Validation\ProductValidationInterface;
 use Log;
 use App\Http\Resources\ProductResource;
+use App\Utils\ResponseFormat;
 
 class ProductController extends Controller
 {
@@ -27,6 +28,12 @@ class ProductController extends Controller
      */
     public function index()
     {
+        // $response = ResponseFormat::createBuilder()
+        //     ->success(true)
+        //     ->payload('payload')
+        //     // ->error('code', 'message')
+        //     ->build();
+
         $products = $this->productService->readAll();
         return ProductResource::collection($products);
     }
