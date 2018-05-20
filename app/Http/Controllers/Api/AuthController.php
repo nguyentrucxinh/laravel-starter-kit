@@ -18,12 +18,12 @@ class AuthController extends Controller
     public function token(Request $request)
     {
         $token = $this->authService->token($request->all());
-        return response()->json($token);
+        return response()->api($token);
     }
 
     public function auth()
     {
         $data = $this->authService->auth();
-        return response()->json($data);
+        return response()->api($data);
     }
 }
