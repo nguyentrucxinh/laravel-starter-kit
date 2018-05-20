@@ -11,9 +11,12 @@
 
 ## The Basics
 
-- [x] Routing & Middleware group
+- [x] Routing
   + https://laravel.com/docs/5.6/routing
+- [ ] Middleware
   + https://laravel.com/docs/5.6/middleware
+- [x] Responses (Response Macros)
+  + https://laravel.com/docs/5.6/responses
 - [ ] URL Generation
   + https://laravel.com/docs/5.6/urls
 - [ ] Session
@@ -120,11 +123,8 @@
 - View modules: `php -m` or `php -m | grep -i mongo`
 ```php
 <?php
-
 // Show all information, defaults to INFO_ALL
 phpinfo();
-
-?>
 ```
 - `composer dump-autoload`
 - List route: `php artisan route:list`
@@ -153,6 +153,73 @@ phpinfo();
 - Artisan console help: `php artisan help`
 - JWT issues: https://appdividend.com/2018/02/24/laravel-jwt-authentication-tutorial/
 - PHP check string is not null or empty: `!empty(trim($val))`
+
+```php
+// Getter & setter
+<?php
+class MyClass {
+  private $firstField;
+  private $secondField;
+
+  public function __get($property) {
+    if (property_exists($this, $property)) {
+      return $this->$property;
+    }
+  }
+
+  public function __set($property, $value) {
+    if (property_exists($this, $property)) {
+      $this->$property = $value;
+    }
+
+    return $this;
+  }
+}
+```
+
+```php
+// Static method in class
+class Test {
+
+    protected static function myProtected($test) {
+        var_dump(__METHOD__, $test);
+    }
+
+    public static function __callStatic($method, $args) {
+        switch($method) {
+            case 'foo' :
+                echo 'You have called foo()';
+                var_dump($args);
+                break;
+
+            case 'helloWorld':
+                echo 'Hello ' . $args[0];
+                break;
+
+            case 'myProtected':
+                return call_user_func_array(
+                    array(get_called_class(), 'myProtected'),
+                    $args
+                );
+                break;
+        }
+    }
+}
+```
+
+```json
+/* Response format */
+{
+  "success": false,
+  "payload": {
+    /* Application-specific data would go here. */
+  },
+  "error": {
+    "code": 123,
+    "message": "An error occurred!"
+  }
+}
+```
 
 # ACCESS LINK
 

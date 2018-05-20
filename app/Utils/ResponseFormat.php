@@ -88,3 +88,10 @@ class Error
         return $this;
     }
 }
+
+// Using
+// $response = ResponseFormat::createBuilder()
+//     ->success(true)
+//     ->payload('payload')
+//     // ->error('code', 'message')
+//     ->build();

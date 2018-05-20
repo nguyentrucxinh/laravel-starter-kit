@@ -164,6 +164,7 @@ return [
         App\Providers\RepositoryServiceProvider::class,
         App\Providers\ValidationServiceProvider::class,
         App\Providers\ServiceServiceProvider::class,
+        App\Providers\ResponseMacroServiceProvider::class,
     ],
 
     /*
