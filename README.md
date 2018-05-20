@@ -32,7 +32,7 @@
 
 - [ ] Encryption
   + https://laravel.com/docs/5.6/encryption
-- [ ] Hashing
+- [x] Hashing
   + https://laravel.com/docs/5.6/hashing
 - [ ] Resetting password (Forgot password)
   + https://laravel.com/docs/5.6/passwords
@@ -91,7 +91,7 @@
   + [x] BaseValidation
   + [ ] BaseController
 - [x] Custom response data {success, data, code, message, ...}
-- [ ] Get property from `env`
+- [x] Get property from `env` (`env('key')`)
 - [ ] HATEOAS
 - [ ] OAuth2
 - [x] JWT (tymon/jwt-auth)
