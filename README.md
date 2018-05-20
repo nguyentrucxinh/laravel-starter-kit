@@ -4,6 +4,11 @@
 
 # TODO:
 
+## Architecture Concepts
+
+- [x] Service Providers
+  + https://laravel.com/docs/5.6/providers
+
 ## The Basics
 
 - [x] Routing & Middleware group
@@ -73,13 +78,14 @@
 - [x] REST
 - [x] Service Layer (BaseService)
 - [x] Repository Layer
-- [ ] Helper Layer (Utils)
+- [x] Helper Layer (Utils)
 - [x] SQLite
 - [ ] Enviroment: dev, prod
 - [x] Transaction
 - [ ] Create Base
   + [x] BaseRepository
   + [x] BaseService
+  + [x] BaseValidation
   + [ ] BaseController
 - [ ] Custom response data {status_code, message, data, ...}
 - [ ] Get property from `env`
