@@ -8,12 +8,12 @@ interface AuthServiceInterface
      * @param $data array
      * @return array
      */
-    public function authentication($data);
+    public function token($data);
 
     /**
      * @return array
      */
-    public function authorization();
+    public function auth();
 
     /**
      * @return array

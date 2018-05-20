@@ -28,7 +28,7 @@ class UserValidation implements UserValidationInterface
     {
     }
 
-    public function authenticate($data)
+    public function token($data)
     {
         $validator = Validator::make($data, [
             'email' => 'required|email|max:255',

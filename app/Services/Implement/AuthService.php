@@ -24,9 +24,9 @@ class AuthService implements AuthServiceInterface
     }
 
     /* AUTH */
-    public function authentication($data)
+    public function token($data)
     {
-        $this->userValid->authenticate($data);
+        $this->userValid->token($data);
 
         $user = $this->userRepo->findOneByFieldName('email', $data['email']);
 
@@ -48,7 +48,7 @@ class AuthService implements AuthServiceInterface
         }
     }
 
-    public function authorization()
+    public function auth()
     {
         return self::getCurrentUser();
     }

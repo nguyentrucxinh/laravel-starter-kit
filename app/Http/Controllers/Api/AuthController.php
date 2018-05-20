@@ -15,15 +15,15 @@ class AuthController extends Controller
         $this->authService = $authService;
     }
 
-    public function authentication(Request $request)
+    public function token(Request $request)
     {
-        $token = $this->authService->authentication($request->all());
+        $token = $this->authService->token($request->all());
         return response()->json($token);
     }
 
-    public function authorization()
+    public function auth()
     {
-        $data = $this->authService->authorization();
+        $data = $this->authService->auth();
         return response()->json($data);
     }
 }

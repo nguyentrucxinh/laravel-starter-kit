@@ -61,10 +61,10 @@ Route::middleware('auth:api', 'throttle:60,1')->group(function () {
 
 // Using
 Route::group(['prefix' => '', 'namespace' => 'Api'], function () {
-    Route::post('/authentication', 'AuthController@authentication');
+    Route::post('/jwt/token', 'AuthController@token');
 
     Route::group(['middleware' => 'jwt.auth'], function () {
-        Route::get('/authorization', 'AuthController@authorization');
+        Route::get('/jwt/auth', 'AuthController@auth');
 
         // Product
         Route::group(['middleware' => [], 'prefix' => 'products'], function () {
