@@ -90,11 +90,11 @@
   + [x] BaseService
   + [x] BaseValidation
   + [ ] BaseController
-- [ ] Custom response data {status_code, message, data, ...}
+- [x] Custom response data {success, data, code, message, ...}
 - [ ] Get property from `env`
 - [ ] HATEOAS
 - [ ] OAuth2
-- [ ] JWT (tymon/jwt-auth)
+- [x] JWT (tymon/jwt-auth)
 - [ ] Swagger
 - [ ] Cookie
 - [ ] Multi languages
