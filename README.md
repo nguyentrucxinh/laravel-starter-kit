@@ -76,6 +76,11 @@
 - [x] API Resources (Transformation layer, Model -> JSON)
   + https://laravel.com/docs/5.6/eloquent-resources
 
+## Official Packages
+
+- [ ] Laravel Socialite
+  + https://laravel.com/docs/5.6/socialite
+
 ## Others
 
 - [x] REST
