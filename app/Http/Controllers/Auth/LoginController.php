@@ -58,6 +58,11 @@ class LoginController extends Controller
         $user = Socialite::driver($provider)->stateless()->user();
         dd($user);
 
+        // $authUser = $this->findOrCreateUser($user, $provider);
+        // Auth::login($authUser, true);
+
+        // return $token
+
         // $user->token;
     }
 }
