@@ -49,7 +49,7 @@
   + https://laravel.com/docs/5.6/events
 - [ ] File Storage (Upload file, Get file, Delete file, Overwrite file, ...)
   + https://laravel.com/docs/5.6/filesystem
-- [ ] Mail (mailtrap.io)
+- [x] Mail (mailtrap.io)
   + https://laravel.com/docs/5.6/mail
 - [ ] Notifications
   + https://laravel.com/docs/5.6/notifications
@@ -78,7 +78,7 @@
 
 ## Official Packages
 
-- [ ] Laravel Socialite
+- [x] Laravel Socialite
   + https://laravel.com/docs/5.6/socialite
 
 ## Others
