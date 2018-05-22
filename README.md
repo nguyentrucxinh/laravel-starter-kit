@@ -231,3 +231,9 @@ class Test {
 - Swagger:
   + http://localhost:8000/docs
   + http://localhost:8000/swagger-ui.html
+
+- Test mail:
+  + http://localhost:8000/test-mailtrap
+
+- Laravel Socialite:
+  + http://localhost:8000/login/{provider}
