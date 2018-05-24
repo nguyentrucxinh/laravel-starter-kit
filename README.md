@@ -53,6 +53,8 @@
   + https://laravel.com/docs/5.6/mail
 - [ ] Notifications
   + https://laravel.com/docs/5.6/notifications
+- [x] Package Discovery
+  + https://laravel.com/docs/5.6/packages#package-discovery
 - [ ] Queues
   + https://laravel.com/docs/5.6/queues
 - [ ] Task Scheduling
@@ -224,6 +226,14 @@ class Test {
     "message": "An error occurred!"
   }
 }
+```
+
+```php
+<?php
+$d = [];
+$d[] = 'email';
+$d[] = 'aaa';
+print_r($d); // [0 => 'email', 1 => 'aaa']
 ```
 
 # ACCESS LINK
