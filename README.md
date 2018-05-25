@@ -71,6 +71,8 @@
 
 ## Eloquent ORM
 
+- [ ] Soft Deleting
+  + https://laravel.com/docs/5.6/eloquent#soft-deleting
 - [ ] Relationships
   + https://laravel.com/docs/5.6/eloquent-relationships
 - [x] Mutators
@@ -114,6 +116,7 @@
 - [x] Package (barryvdh/laravel-ide-helper, doctrine/dbal)
 - [ ] CORS (barryvdh/laravel-cors)
 - [ ] Import/Export Excel/CSV (maatwebsite/excel)
+- [ ] Migration (Alter table)
 
 # RUN LOCALLY
 
