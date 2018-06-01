@@ -14,9 +14,11 @@ class ResponseMacroServiceProvider extends ServiceProvider
      */
     public function boot(ResponseFactory $factory)
     {
-        $factory->macro('api', function ($data) use ($factory) {
+        $factory->macro('api', function ($data, $message = null) use ($factory) {
             $customFormat = [
                 'success' => true,
+                'time' => time(),
+                'message' => $message,
                 'data' => $data
             ];
             return $factory->make($customFormat);

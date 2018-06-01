@@ -25,6 +25,7 @@ class ApiException extends Exception
     {
         return response()->json([
             'success' => false,
+            'time' => time(),
             'data' => null,
             'error' => [
                 'code' => null,

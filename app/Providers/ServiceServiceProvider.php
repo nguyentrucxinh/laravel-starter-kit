@@ -23,16 +23,13 @@ class ServiceServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // AuthService
-        $this->app->bind(
-            'App\Services\AuthServiceInterface',
-            'App\Services\Implement\AuthService'
-        );
+        $services = [
+            'Auth',
+            'Product'
+        ];
 
-        // ProductService
-        $this->app->bind(
-            'App\Services\ProductServiceInterface',
-            'App\Services\Implement\ProductService'
-        );
+        foreach ($services as $service) {
+            $this->app->bind("App\Services\\{$service}ServiceInterface", "App\Services\Implement\\{$service}Service");
+        }
     }
 }
