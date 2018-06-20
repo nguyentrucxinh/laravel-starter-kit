@@ -6,6 +6,8 @@ use Exception;
 
 class ApiException extends Exception
 {
+    public $code = 422;
+
     /**
      * Report the exception.
      *
@@ -25,6 +27,7 @@ class ApiException extends Exception
     {
         return response()->json([
             'success' => false,
+            'status' => false,
             'time' => time(),
             'data' => null,
             'error' => [
@@ -32,5 +35,15 @@ class ApiException extends Exception
                 'message' => $this->getMessage()
             ]
         ]);
+    }
+
+    public function withCode($code)
+    {
+        $this->code = $code;
+
+        return $this;
+
+        // Usage:
+        // throw (new ApiException('Permission deny'))->withCode(403);
     }
 }
