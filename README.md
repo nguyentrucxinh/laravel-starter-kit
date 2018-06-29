@@ -162,6 +162,9 @@ phpinfo();
   + `make:notification`
   + `make:policy`
   + `make:provider`
+- `php artisan cache:clear`
+- `php artisan config:clear`
+- `php artisan route:clear`
 - Artisan console help: `php artisan help`
 - JWT issues: https://appdividend.com/2018/02/24/laravel-jwt-authentication-tutorial/
 - PHP check string is not null or empty: `!empty(trim($val))`
