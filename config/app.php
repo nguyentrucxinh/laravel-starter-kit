@@ -162,6 +162,7 @@ return [
         App\Providers\ValidationServiceProvider::class,
         App\Providers\ServiceServiceProvider::class,
         App\Providers\ResponseMacroServiceProvider::class,
+        App\Providers\QueryLoggingServiceProvider::class,
     ],
 
     /*

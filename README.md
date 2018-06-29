@@ -118,6 +118,7 @@
 - [ ] Import/Export Excel/CSV (maatwebsite/excel)
 - [ ] Migration (Alter table)
 - [ ] PRS-4
+- [x] Query Logging (Global & Inline)
 
 # RUN LOCALLY
 
@@ -125,7 +126,7 @@
 - Create env: `php -r "file_exists('.env') || copy('.env.example', '.env');"`
 - Generate key: `php artisan key:generate`
 - Run Dev: `php artisan serve`
-- Run Prod: ``
+- Run Prod:
 
 # TIPS & TRICKS
 
@@ -164,6 +165,26 @@ phpinfo();
 - Artisan console help: `php artisan help`
 - JWT issues: https://appdividend.com/2018/02/24/laravel-jwt-authentication-tutorial/
 - PHP check string is not null or empty: `!empty(trim($val))`
+
+```php
+// Query Logging
+// 1
+$users = DB::table("users")->toSql();
+dd($query);
+
+// 2
+DB::enableQueryLog();
+$user = DB::table("users")->get();
+$query = DB::getQueryLog();
+dd($query);
+
+// 3
+DB::enableQueryLog();
+$user = DB::table("users")->get();
+$query = DB::getQueryLog();
+$query = end($query);
+dd($query);
+```
 
 ```php
 // Getter & setter
